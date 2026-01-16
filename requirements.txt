@@ -1,0 +1,13 @@
+sounddevice
+numpy
+mlx-whisper
+scipy
+kokoro-onnx
+sounddevice
+onnxruntime
+discord
+python-dotenv
+websockets
+fastapi
+uvicorn
+httpx

@@ -1,0 +1,11 @@
+venv
+.venv
+.env
+.env.*
+.python-version
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+whoop/data/
