@@ -25,6 +25,8 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
   - `whoop_client.py`: WHOOP OAuth + REST client
   - `whoop_store.py`: token storage
   - `whoop_briefing.py`: data summarization + Discord embed payloads
+- **UI** (`ui/`)
+  - Lightweight chat UI that streams via HalaAI WebSocket
 
 ## Data flow (WHOOP -> HalaAI -> Discord)
 1) WHOOP sends a webhook event (sleep/recovery/workout updated).

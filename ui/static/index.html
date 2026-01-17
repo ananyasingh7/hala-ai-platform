@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HalaAI Chat</title>
+    <meta name="theme-color" content="#0f1012" />
+    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="icon" href="/static/icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>HalaAI</h1>
+          <div class="sidebar-actions-top">
+            <button id="new-chat" class="button">
+              <span class="material-symbols-rounded" aria-hidden="true">add</span>
+              New chat
+            </button>
+            <button id="refresh-sessions" class="ghost" aria-label="Refresh chats" title="Refresh chats">
+              <span class="material-symbols-rounded" aria-hidden="true">refresh</span>
+            </button>
+          </div>
+        </div>
+        <div id="session-list" class="session-list"></div>
+      </aside>
+
+      <main class="chat">
+        <div id="chat-header" class="chat-header">
+          <div class="chat-header-left">
+            <div class="chat-title">New conversation</div>
+            <div class="chat-subtitle" id="chat-subtitle">Local HalaAI engine</div>
+          </div>
+          <div class="chat-header-right">
+            <span id="status" class="status">Connecting...</span>
+            <button id="theme-toggle" class="ghost" title="Toggle theme" aria-label="Toggle theme">
+              <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+        <form id="composer" class="composer">
+          <textarea
+            id="prompt"
+            placeholder="Message HalaAI..."
+            rows="1"
+            autocomplete="off"
+          ></textarea>
+          <button type="submit" class="button primary">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

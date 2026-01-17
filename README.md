@@ -16,6 +16,7 @@ It connects external data sources (WHOOP), local services, and Discord agents to
 - `agents/whoop/server.py` - WHOOP OAuth + webhook receiver
 - `services/` - reusable clients (WHOOP + HalaAI WS)
 - `audio/` - microphone + speaker components (work in progress)
+- `ui/` - lightweight web chat UI (ChatGPT-style)
 
 ## Upcoming bots
 - News/Prediction Markets Bot
@@ -55,6 +56,18 @@ python agents/whoop/server.py
 4) Start the Discord bot:
 ```
 python agents/discord/main.py
+```
+
+5) Start the lightweight chat UI:
+```
+python -m uvicorn ui.app:app --reload --port 8080
+```
+Then open http://localhost:8080
+
+Optional overrides:
+```
+HALA_API_BASE=http://localhost:8000
+HALA_WS_URL=ws://localhost:8000/ws/chat/v2
 ```
 
 ## Notes
