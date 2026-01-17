@@ -11,7 +11,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, RedirectResponse
 from dotenv import load_dotenv
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[2]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
@@ -259,4 +259,4 @@ if __name__ == "__main__":
     import uvicorn
 
     port = int(os.getenv("WHOOP_PORT", "8765"))
-    uvicorn.run("whoop.server:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run("agents.whoop.server:app", host="0.0.0.0", port=port, reload=False)

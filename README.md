@@ -13,7 +13,7 @@ It connects external data sources (WHOOP), local services, and Discord agents to
 
 ## Current components
 - `agents/discord` - Discord bot (mentions, daily briefing, health channel behavior)
-- `whoop/server.py` - WHOOP OAuth + webhook receiver
+- `agents/whoop/server.py` - WHOOP OAuth + webhook receiver
 - `services/` - reusable clients (WHOOP + HalaAI WS)
 - `audio/` - microphone + speaker components (work in progress)
 
@@ -49,7 +49,7 @@ HEALTH_TIMEZONE=America/Los_Angeles
 
 3) Start the WHOOP server:
 ```
-python whoop/server.py
+python agents/whoop/server.py
 ```
 
 4) Start the Discord bot:
