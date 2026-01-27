@@ -12,11 +12,11 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
 ## Components
 - **HalaAI Engine**: primary intelligence engine (external repo)
   - https://github.com/ananyasingh7/HalaAI
-- **Discord Agent** (`agents/discord/main.py`)
+- **Discord Agent** (`tools/discord/main.py`)
   - Handles @HalaAI mentions
   - Special health channel behavior
   - Scheduled daily briefing (11:00)
-- **WHOOP Server** (`agents/whoop/server.py`)
+- **WHOOP Server** (`tools/whoop/server.py`)
   - OAuth callback
   - Webhook receiver with signature validation
   - Fetches WHOOP v2 resources and passes summaries to HalaAI
@@ -27,10 +27,12 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
   - `whoop_briefing.py`: data summarization + Discord embed payloads
 - **UI** (`ui/`)
   - Lightweight chat UI that streams via HalaAI WebSocket
+- **Travel Planner Agent** (`agents/travel_planner_agent/agent.py`)
+  - First config-driven agent (weather + currency + HalaAI)
 
 ## Data flow (WHOOP -> HalaAI -> Discord)
 1) WHOOP sends a webhook event (sleep/recovery/workout updated).
-2) `agents/whoop/server.py` validates signature and enqueues processing.
+2) `tools/whoop/server.py` validates signature and enqueues processing.
 3) The server fetches relevant WHOOP v2 resources (sleep/cycle/recovery/workout).
 4) `services/whoop_briefing.py` builds a structured summary.
 5) `services/hala_ws.py` calls HalaAI with the summary and coaching prompt.
@@ -49,7 +51,7 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
 ## Security
 - WHOOP OAuth uses authorization code flow.
 - Webhooks are verified with HMAC SHA-256 using the WHOOP app secret.
-- Tokens are stored locally in `agents/whoop/data/tokens.json` (replace with DB later).
+- Tokens are stored locally in `tools/whoop/data/tokens.json` (replace with DB later).
 
 ## Roadmap
 Upcoming bots are tracked in `README.md`.
