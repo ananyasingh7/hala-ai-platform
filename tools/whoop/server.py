@@ -259,4 +259,4 @@ if __name__ == "__main__":
     import uvicorn
 
     port = int(os.getenv("WHOOP_PORT", "8765"))
-    uvicorn.run("agents.whoop.server:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run("tools.whoop.server:app", host="0.0.0.0", port=port, reload=False)

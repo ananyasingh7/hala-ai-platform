@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Dict, Optional, Tuple
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT_DIR / "agents" / "whoop" / "data"
+DATA_DIR = ROOT_DIR / "tools" / "whoop" / "data"
 TOKENS_PATH = DATA_DIR / "tokens.json"
 
 _LOCK = threading.Lock()

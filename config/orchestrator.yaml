@@ -1,0 +1,53 @@
+version: 1
+name: hala-platform-orchestrator
+
+defaults:
+  timeouts:
+    agent_sec: 20
+    tool_sec: 8
+  retries:
+    tool: 1
+  logging:
+    level: INFO
+
+tools:
+  hala_engine:
+    type: hala_ws
+    config:
+      ws_url: ${HALA_WS_URL:-ws://localhost:8000/ws/chat/v2}
+      max_tokens: 250
+      timeout_sec: 15
+  openweather:
+    type: openweather
+    config:
+      units: metric
+  exchange_rates:
+    type: exchange_rates
+    config: {}
+
+agents:
+  TravelPlannerAgent:
+    class: agents.travel_planner_agent.agent.TravelPlannerAgent
+    description: Travel planner using weather + currency APIs + HalaAI.
+    tools:
+      - hala_engine
+      - openweather
+      - exchange_rates
+    limits:
+      timeout_sec: 20
+      max_tokens: 300
+    writes:
+      final_output: true
+      data_keys:
+        - travel
+
+missions:
+  travel_planner:
+    objective_template: "Plan a trip."
+    planner:
+      type: static
+      steps:
+        - TravelPlannerAgent
+    limits:
+      max_steps: 3
+      stop_on_error: true

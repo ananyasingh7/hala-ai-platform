@@ -12,8 +12,9 @@ It connects external data sources (WHOOP), local services, and Discord agents to
 - Pushes structured summaries to HalaAI via WebSocket.
 
 ## Current components
-- `agents/discord` - Discord bot (mentions, daily briefing, health channel behavior)
-- `agents/whoop/server.py` - WHOOP OAuth + webhook receiver
+- `tools/discord` - Discord bot (mentions, daily briefing, health channel behavior)
+- `tools/whoop/server.py` - WHOOP OAuth + webhook receiver
+- `agents/travel_planner_agent` - First demo agent (weather + currency + HalaAI)
 - `services/` - reusable clients (WHOOP + HalaAI WS)
 - `audio/` - microphone + speaker components (work in progress)
 - `ui/` - lightweight web chat UI (ChatGPT-style)
@@ -50,12 +51,12 @@ HEALTH_TIMEZONE=America/Los_Angeles
 
 3) Start the WHOOP server:
 ```
-python agents/whoop/server.py
+python tools/whoop/server.py
 ```
 
 4) Start the Discord bot:
 ```
-python agents/discord/main.py
+python tools/discord/main.py
 ```
 
 5) Start the lightweight chat UI:
