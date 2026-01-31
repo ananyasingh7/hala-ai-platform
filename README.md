@@ -60,10 +60,20 @@ python tools/discord/main.py
 ```
 
 5) Start the lightweight chat UI:
+
+
+
+```bash
+
+cd ui
+
+npm install
+
+npm run dev
+
 ```
-python -m uvicorn ui.app:app --reload --port 8080
-```
-Then open http://localhost:8080
+
+Then open http://localhost:5173
 
 Optional overrides:
 ```
