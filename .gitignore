@@ -9,3 +9,5 @@ __pycache__/
 .vscode/
 .idea/
 tools/whoop/data/
+esty
+ui/node_modules

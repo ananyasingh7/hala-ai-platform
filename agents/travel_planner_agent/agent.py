@@ -9,7 +9,6 @@ from typing import Any, Dict, Optional
 
 from hala_orchestrator import Agent, MissionState, agent, get_logger
 
-
 def _safe_json_extract(text: str) -> Dict[str, Any]:
     if not text:
         return {}
