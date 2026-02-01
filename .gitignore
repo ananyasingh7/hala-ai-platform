@@ -11,3 +11,4 @@ __pycache__/
 tools/whoop/data/
 esty
 ui/node_modules
+ui/.vite
