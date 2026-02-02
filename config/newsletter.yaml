@@ -1,0 +1,52 @@
+news:
+  category: business
+  query: technology
+  country: us
+  page_size: 8
+  min_headlines: 5
+
+markets:
+  enabled: false
+  futures:
+    - ES=F
+    - NQ=F
+  indices:
+    - ^N225
+    - ^FTSE
+
+crypto:
+  ids:
+    - bitcoin
+    - ethereum
+    - solana
+    - ripple
+    - dogecoin
+  per_page: 5
+
+prediction_markets:
+  kalshi_trending_limit: 5
+  kalshi_top_movers_limit: 5
+  polymarket_limit: 8
+  polymarket_order: volume24hr
+
+calendar:
+  days_ahead: 7
+  indicators:
+    - UNEMPLOYMENT
+    - INFLATION
+    - GDP
+  important_earnings_limit: 8
+
+anomaly:
+  zscore_threshold: 2.0
+
+delivery:
+  output_dir: demo/reports/morning_newsletter
+
+weather:
+  city: New York, US
+  units: imperial
+
+portfolio:
+  equities: []
+  crypto_ids: []

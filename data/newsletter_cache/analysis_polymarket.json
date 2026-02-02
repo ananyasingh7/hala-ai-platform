@@ -1,0 +1,110 @@
+{
+  "timestamp": 1769971241.1835039,
+  "payload": [
+    {
+      "id": "12",
+      "question": "Will Joe Biden get Coronavirus before the election?",
+      "yes_price": null,
+      "volume": 32257.45,
+      "delta": null
+    },
+    {
+      "id": "17",
+      "question": "Will Airbnb begin publicly trading before Jan 1, 2021?",
+      "yes_price": null,
+      "volume": 89665.25,
+      "delta": null
+    },
+    {
+      "id": "18",
+      "question": "Will a new Supreme Court Justice be confirmed before Nov 3rd, 2020?",
+      "yes_price": null,
+      "volume": 43279.46,
+      "delta": null
+    },
+    {
+      "id": "19",
+      "question": "Will Kim Kardashian and Kanye West divorce before Jan 1, 2021?",
+      "yes_price": null,
+      "volume": 22067.48,
+      "delta": null
+    },
+    {
+      "id": "20",
+      "question": "Will Coinbase begin publicly trading before Jan 1, 2021?",
+      "yes_price": null,
+      "volume": 116803.38,
+      "delta": null
+    },
+    {
+      "id": "36",
+      "question": "What will the price of Bitcoin be on November 4th, 2020?",
+      "yes_price": null,
+      "volume": 59755.8,
+      "delta": null
+    },
+    {
+      "id": "40",
+      "question": "Will Trump win the 2020 U.S. presidential election?",
+      "yes_price": null,
+      "volume": 10802601.99,
+      "delta": null
+    },
+    {
+      "id": "42",
+      "question": "Will there be an Emergency Use Authorization (EUA) granted for a COVID-19 vaccine prior to Nov 3 2020?",
+      "yes_price": null,
+      "volume": 21881.06,
+      "delta": null
+    },
+    {
+      "id": "43",
+      "question": "What will the total value locked (TVL) in DeFi be at the end of 2020, according to DefiPulse?",
+      "yes_price": null,
+      "volume": 46944.58,
+      "delta": null
+    },
+    {
+      "id": "44",
+      "question": "What will the USD price of Filecoin ($FIL) be on November 17th, 2020?",
+      "yes_price": null,
+      "volume": 69947.1,
+      "delta": null
+    },
+    {
+      "id": "46",
+      "question": "Will Drake release a new studio album before the end of 2020?",
+      "yes_price": null,
+      "volume": 31841.39,
+      "delta": null
+    },
+    {
+      "id": "47",
+      "question": "Which party will win Florida in the 2020 presidential election?",
+      "yes_price": null,
+      "volume": 243053.25,
+      "delta": null
+    },
+    {
+      "id": "48",
+      "question": "How many confirmed Coronavirus cases will there be at EOY in the USA?",
+      "yes_price": null,
+      "volume": 72112.48,
+      "delta": null
+    },
+    {
+      "id": "56",
+      "question": "Who will win the 2020 MLB World Series?",
+      "yes_price": null,
+      "volume": 107601.59,
+      "delta": null
+    },
+    {
+      "id": "57",
+      "question": "Will Dharma’s Phase 1 Retroactive UNI Distribution proposal pass?",
+      "yes_price": null,
+      "volume": 35661.94,
+      "delta": null
+    }
+  ]
+}

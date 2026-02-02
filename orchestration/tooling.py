@@ -4,6 +4,16 @@ from typing import Any, Dict
 from hala_orchestrator.tools import Tool
 from services.hala_ws import query_hala
 from tools.exchange.tool import ExchangeRatesTool
+from tools.newsletter.tools import (
+    CalendarTool,
+    CryptoTool,
+    DeliveryTool,
+    KalshiTool,
+    KalshiAlphaTool,
+    MarketsTool,
+    NewsTool,
+    PolymarketTool,
+)
 from tools.weather.tool import OpenWeatherTool
 
 
@@ -57,8 +67,56 @@ def get_tool_factories() -> Dict[str, callable]:
         tool.name = name
         return tool
 
+    def news_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = NewsTool()
+        tool.name = name
+        return tool
+
+    def kalshi_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = KalshiTool()
+        tool.name = name
+        return tool
+
+    def kalshi_alpha_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = KalshiAlphaTool()
+        tool.name = name
+        return tool
+
+    def polymarket_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = PolymarketTool()
+        tool.name = name
+        return tool
+
+    def crypto_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = CryptoTool()
+        tool.name = name
+        return tool
+
+    def markets_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = MarketsTool()
+        tool.name = name
+        return tool
+
+    def calendar_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = CalendarTool()
+        tool.name = name
+        return tool
+
+    def delivery_factory(name: str, config: Dict[str, Any]) -> Tool:
+        tool = DeliveryTool()
+        tool.name = name
+        return tool
+
     return {
         "hala_ws": hala_factory,
         "openweather": openweather_factory,
         "exchange_rates": exchange_factory,
+        "news_api": news_factory,
+        "kalshi_api": kalshi_factory,
+        "kalshi_alpha": kalshi_alpha_factory,
+        "polymarket_api": polymarket_factory,
+        "crypto_api": crypto_factory,
+        "markets_api": markets_factory,
+        "calendar_api": calendar_factory,
+        "delivery": delivery_factory,
     }

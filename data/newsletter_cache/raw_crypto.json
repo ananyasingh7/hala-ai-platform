@@ -1,0 +1,50 @@
+{
+  "timestamp": 1769997571.682155,
+  "payload": [
+    {
+      "id": "bitcoin",
+      "symbol": "btc",
+      "name": "Bitcoin",
+      "price": 77475,
+      "market_cap": 1547973324552,
+      "volume": 59274705084,
+      "change_24h": -1.23823
+    },
+    {
+      "id": "ethereum",
+      "symbol": "eth",
+      "name": "Ethereum",
+      "price": 2293.08,
+      "market_cap": 276732844098,
+      "volume": 42539684391,
+      "change_24h": -6.13728
+    },
+    {
+      "id": "ripple",
+      "symbol": "xrp",
+      "name": "XRP",
+      "price": 1.6,
+      "market_cap": 97571634396,
+      "volume": 3996569416,
+      "change_24h": -3.2882
+    },
+    {
+      "id": "solana",
+      "symbol": "sol",
+      "name": "Solana",
+      "price": 102.13,
+      "market_cap": 57849908132,
+      "volume": 6321232235,
+      "change_24h": -2.59129
+    },
+    {
+      "id": "dogecoin",
+      "symbol": "doge",
+      "name": "Dogecoin",
+      "price": 0.105242,
+      "market_cap": 17738161096,
+      "volume": 1658189668,
+      "change_24h": 0.54454
+    }
+  ]
+}

@@ -29,6 +29,11 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
   - Lightweight chat UI that streams via HalaAI WebSocket
 - **Travel Planner Agent** (`agents/travel_planner_agent/agent.py`)
   - First config-driven agent (weather + currency + HalaAI)
+- **Morning Newsletter Agent** (`agents/morning_newsletter_agent/agent.py`)
+  - News + markets + crypto + calendar + weather
+  - Two-stage HalaAI summarization (full-text top 3 + full brief)
+- **Scheduler** (`scheduler/`)
+  - Daily runner for morning newsletter
 
 ## Data flow (WHOOP -> HalaAI -> Discord)
 1) WHOOP sends a webhook event (sleep/recovery/workout updated).
@@ -47,11 +52,14 @@ This repo provides integrations and agents around the HalaAI core engine. The ma
 ## Scheduling
 - A daily briefing task runs every minute and posts once at the configured time.
 - Controlled by `HEALTH_BRIEFING_TIME` and `HEALTH_TIMEZONE`.
+- Morning newsletter scheduler runs daily at 6:05 AM ET (configurable via env).
 
 ## Security
 - WHOOP OAuth uses authorization code flow.
 - Webhooks are verified with HMAC SHA-256 using the WHOOP app secret.
 - Tokens are stored locally in `tools/whoop/data/tokens.json` (replace with DB later).
+- Morning newsletter uses a Discord webhook stored in `.env` (never committed).
+- Portfolio config is stored in `config/portfolio.yaml` (gitignored).
 
 ## Roadmap
 Upcoming bots are tracked in `README.md`.

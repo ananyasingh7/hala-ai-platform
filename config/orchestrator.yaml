@@ -3,7 +3,7 @@ name: hala-platform-orchestrator
 
 defaults:
   timeouts:
-    agent_sec: 20
+    agent_sec: 120
     tool_sec: 8
   retries:
     tool: 1
@@ -15,14 +15,38 @@ tools:
     type: hala_ws
     config:
       ws_url: ${HALA_WS_URL:-ws://localhost:8000/ws/chat/v2}
-      max_tokens: 250
-      timeout_sec: 15
+      max_tokens: 800
+      timeout_sec: 30
   openweather:
     type: openweather
     config:
       units: metric
   exchange_rates:
     type: exchange_rates
+    config: {}
+  news_api:
+    type: news_api
+    config: {}
+  kalshi_api:
+    type: kalshi_api
+    config: {}
+  kalshi_alpha:
+    type: kalshi_alpha
+    config: {}
+  polymarket_api:
+    type: polymarket_api
+    config: {}
+  crypto_api:
+    type: crypto_api
+    config: {}
+  markets_api:
+    type: markets_api
+    config: {}
+  calendar_api:
+    type: calendar_api
+    config: {}
+  delivery:
+    type: delivery
     config: {}
 
 agents:
@@ -40,6 +64,36 @@ agents:
       final_output: true
       data_keys:
         - travel
+  FetchDataAgent:
+    class: agents.morning_newsletter_agent.agent.FetchDataAgent
+    description: Fetches data for the morning newsletter.
+    tools:
+      - news_api
+      - kalshi_alpha
+      - polymarket_api
+      - crypto_api
+      - markets_api
+      - calendar_api
+      - openweather
+    limits:
+      timeout_sec: 120
+  AnalyzeNewsletterAgent:
+    class: agents.morning_newsletter_agent.agent.AnalyzeNewsletterAgent
+    description: Analyzes and normalizes newsletter data.
+  ComposeNewsletterAgent:
+    class: agents.morning_newsletter_agent.agent.ComposeNewsletterAgent
+    description: Composes newsletter markdown.
+    tools:
+      - hala_engine
+    limits:
+      timeout_sec: 90
+    writes:
+      final_output: true
+  DeliverNewsletterAgent:
+    class: agents.morning_newsletter_agent.agent.DeliverNewsletterAgent
+    description: Writes newsletter to disk/email.
+    tools:
+      - delivery
 
 missions:
   travel_planner:
@@ -50,4 +104,16 @@ missions:
         - TravelPlannerAgent
     limits:
       max_steps: 3
+      stop_on_error: true
+  morning_newsletter:
+    objective_template: "Generate the morning newsletter."
+    planner:
+      type: static
+      steps:
+        - FetchDataAgent
+        - AnalyzeNewsletterAgent
+        - ComposeNewsletterAgent
+        - DeliverNewsletterAgent
+    limits:
+      max_steps: 6
       stop_on_error: true

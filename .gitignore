@@ -12,3 +12,5 @@ tools/whoop/data/
 esty
 ui/node_modules
 ui/.vite
+config/portfolio.yaml
+demo/reports/

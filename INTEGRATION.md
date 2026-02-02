@@ -121,6 +121,26 @@ curl -X POST http://localhost:8000/data/vector/search \
 - `HALA_WS_URL` (client-side): set WebSocket URL (e.g., `ws://localhost:8000/ws/chat/v2`)
 - `HALA_HISTORY_DB_URL` (server-side): Postgres connection for sessions
 
+## Platform Integrations (hala-ai-platform)
+
+### Morning Newsletter
+The platform uses HalaAI via the WebSocket client in `services/hala_ws.py` to generate:
+- Headline summaries (including top-3 full-text summaries)
+- Prediction market summaries
+- Earnings prioritization
+
+Delivery is handled by `tools/newsletter`:
+- Writes Markdown to `demo/reports/morning_newsletter/`
+- Posts to Discord via webhook (if configured)
+- Sends email via SMTP (optional)
+
+Key env vars:
+- `HALA_WS_URL`
+- `OPENWEATHER_API_KEY`
+- `NEWS_API_KEY`
+- `ALPHA_VANTAGE_API_KEY`
+- `DISCORD_NEWSLETTER_WEBHOOK_URL` (or `DISCORD_WEBHOOK_URL`)
+
 ## Notes
 
 - The server automatically handles:

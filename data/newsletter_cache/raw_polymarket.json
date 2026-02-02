@@ -1,0 +1,237 @@
+{
+  "timestamp": 1769997572.461951,
+  "payload": [
+    {
+      "id": "680392",
+      "question": "US government shutdown Saturday?",
+      "slug": "will-there-be-another-us-government-shutdown-by-january-31",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.9985",
+        "0.0015"
+      ],
+      "yes_price": 0.9985,
+      "top_outcomes": [
+        {
+          "outcome": "Yes",
+          "price": 0.9985
+        },
+        {
+          "outcome": "No",
+          "price": 0.0015
+        }
+      ],
+      "volume": 99828414.20273,
+      "volume_24h": 23167303.91676093,
+      "liquidity": 5728718.2073,
+      "end_date": "2026-01-31T00:00:00Z",
+      "url": null
+    },
+    {
+      "id": "566192",
+      "question": "Will Tottenham win the 2025–26 English Premier League?",
+      "slug": "will-tottenham-win-the-202526-english-premier-league",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0005",
+        "0.9995"
+      ],
+      "yes_price": 0.0005,
+      "top_outcomes": [
+        {
+          "outcome": "No",
+          "price": 0.9995
+        },
+        {
+          "outcome": "Yes",
+          "price": 0.0005
+        }
+      ],
+      "volume": 16065216.509967,
+      "volume_24h": 6871025.349999999,
+      "liquidity": 904218.50961,
+      "end_date": "2026-05-27T00:00:00Z",
+      "url": null
+    },
+    {
+      "id": "1299670",
+      "question": "Australian Open Men's: Carlos Alcaraz vs Novak Djokovic",
+      "slug": "atp-alcaraz-djokovi-2026-02-01",
+      "outcomes": [
+        "Alcaraz",
+        "Djokovic"
+      ],
+      "outcome_prices": [
+        "1",
+        "0"
+      ],
+      "yes_price": 1.0,
+      "top_outcomes": [
+        {
+          "outcome": "Alcaraz",
+          "price": 1.0
+        },
+        {
+          "outcome": "Djokovic",
+          "price": 0.0
+        }
+      ],
+      "volume": 6849886.730076,
+      "volume_24h": 6104449.242795989,
+      "liquidity": null,
+      "end_date": "2026-02-15T08:30:00Z",
+      "url": null
+    },
+    {
+      "id": "654415",
+      "question": "Will the Fed increase interest rates by 25+ bps after the March 2026 meeting?",
+      "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-march-2026-meeting",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0155",
+        "0.9845"
+      ],
+      "yes_price": 0.0155,
+      "top_outcomes": [
+        {
+          "outcome": "No",
+          "price": 0.9845
+        },
+        {
+          "outcome": "Yes",
+          "price": 0.0155
+        }
+      ],
+      "volume": 18265677.858218,
+      "volume_24h": 4825646.192271998,
+      "liquidity": 1072596.97431,
+      "end_date": "2026-03-18T00:00:00Z",
+      "url": null
+    },
+    {
+      "id": "654412",
+      "question": "Will the Fed decrease interest rates by 50+ bps after the March 2026 meeting?",
+      "slug": "will-the-fed-decrease-interest-rates-by-50-bps-after-the-march-2026-meeting",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0145",
+        "0.9855"
+      ],
+      "yes_price": 0.0145,
+      "top_outcomes": [
+        {
+          "outcome": "No",
+          "price": 0.9855
+        },
+        {
+          "outcome": "Yes",
+          "price": 0.0145
+        }
+      ],
+      "volume": 13859850.124241,
+      "volume_24h": 4336911.911168005,
+      "liquidity": 1146343.48714,
+      "end_date": "2026-03-18T00:00:00Z",
+      "url": null
+    },
+    {
+      "id": "1294616",
+      "question": "US strikes Iran by February 1, 2026?",
+      "slug": "us-strikes-iran-by-february-1-2026",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0015",
+        "0.9985"
+      ],
+      "yes_price": 0.0015,
+      "top_outcomes": [
+        {
+          "outcome": "No",
+          "price": 0.9985
+        },
+        {
+          "outcome": "Yes",
+          "price": 0.0015
+        }
+      ],
+      "volume": 6201418.886404,
+      "volume_24h": 4265922.096890005,
+      "liquidity": 461654.04147,
+      "end_date": "2026-02-01T00:00:00Z",
+      "url": null
+    },
+    {
+      "id": "1155784",
+      "question": "UFC 325: Volkanovski vs. Lopes (Featherweight, Main Card)",
+      "slug": "ufc-ale14-die4-2026-01-31",
+      "outcomes": [
+        "Volkanovski",
+        "Lopes"
+      ],
+      "outcome_prices": [
+        "1",
+        "0"
+      ],
+      "yes_price": 1.0,
+      "top_outcomes": [
+        {
+          "outcome": "Volkanovski",
+          "price": 1.0
+        },
+        {
+          "outcome": "Lopes",
+          "price": 0.0
+        }
+      ],
+      "volume": 4853747.490324,
+      "volume_24h": 3991272.6536409864,
+      "liquidity": null,
+      "end_date": "2026-02-01T08:55:00Z",
+      "url": null
+    },
+    {
+      "id": "572473",
+      "question": "Will Trump nominate Judy Shelton as the next Fed chair?",
+      "slug": "will-trump-nominate-judy-shelton-as-the-next-fed-chair",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "outcome_prices": [
+        "0.0085",
+        "0.9915"
+      ],
+      "yes_price": 0.0085,
+      "top_outcomes": [
+        {
+          "outcome": "No",
+          "price": 0.9915
+        },
+        {
+          "outcome": "Yes",
+          "price": 0.0085
+        }
+      ],
+      "volume": 39063137.384423,
+      "volume_24h": 3779812.272717,
+      "liquidity": 1503485.08595,
+      "end_date": "2026-12-31T00:00:00Z",
+      "url": null
+    }
+  ]
+}
