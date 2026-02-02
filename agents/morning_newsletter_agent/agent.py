@@ -389,10 +389,7 @@ class ComposeNewsletterAgent(Agent):
         config = state.data.get("newsletter_config") or load_newsletter_config()
 
         if hala:
-            session_id = state.metadata.get("newsletter_session_id")
-            if not session_id:
-                session_id = str(uuid.uuid4())
-                state.metadata["newsletter_session_id"] = session_id
+            session_id = None
 
             news_items = _safe_list(sections.get("news", {}).get("items"))
             portfolio_cfg = config.get("portfolio", {}) or {}
@@ -432,7 +429,7 @@ class ComposeNewsletterAgent(Agent):
                 stage1_response = await hala.run(
                     prompt=stage1_prompt,
                     session_id=session_id,
-                    start_session=True,
+                    start_session=False,
                     include_history=False,
                     system_prompt="Return valid JSON only.",
                     max_tokens=400,
@@ -525,7 +522,7 @@ class ComposeNewsletterAgent(Agent):
             response = await hala.run(
                 prompt=prompt,
                 session_id=session_id,
-                start_session=True,
+                start_session=False,
                 include_history=False,
                 system_prompt="Return valid JSON only. No markdown or commentary.",
                 max_tokens=700,

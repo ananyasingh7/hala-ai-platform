@@ -19,16 +19,17 @@ async def query_hala(
     payload = {
         "prompt": prompt,
         "max_tokens": max_tokens,
-        "session_id": session_id,
         "include_history": include_history,
         "history_window": history_window,
     }
+    if session_id:
+        payload["session_id"] = session_id
     if system_prompt:
         payload["system_prompt"] = system_prompt
 
     endpoint = ws_url or os.getenv("HALA_WS_URL", DEFAULT_WS_URL)
     async with websockets.connect(endpoint) as ws:
-        if start_session:
+        if start_session and session_id:
             await ws.send(json.dumps({"type": "session_start", "session_id": session_id}))
         await ws.send(json.dumps(payload))
 
